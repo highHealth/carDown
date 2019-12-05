@@ -11,5 +11,5 @@ public class News {
     private String img;
     private String vido;
     private String location;
-    private Integer type;
+    private String type;
 }

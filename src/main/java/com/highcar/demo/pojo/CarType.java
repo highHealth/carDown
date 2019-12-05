@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class CarType {
-    private Integer id;
-    private String typeName;
+    private Integer img;
+    private String type_name;
     private String mark;
 }
