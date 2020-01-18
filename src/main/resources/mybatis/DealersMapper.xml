@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.highcar.demo.mapper.DealersMapper">
+    <resultMap id="map" type="com.highcar.demo.pojo.Dealers">
+        <!-- 主键 -->
+        <id property="id" column="id" />
+        <!-- 定义普通属性 -->
+        <result property="address" column="address" />
+        <result property="telephone" column="telephone" />
+        <result property="longitude" column="longitude" />
+        <result property="latitude" column="latitude" />
+        <result property="symbolSize" column="symbol_size" />
+        <result property="date" column="date" />
+        <result property="type" column="type" />
+    </resultMap>
+
+
+    <!--  初始化地图地址  -->
+    <select id="showMap" resultType="com.highcar.demo.pojo.Dealers">
+        SELECT
+            address,
+            longitude,
+            latitude
+        FROM
+            dealers
+    </select>
+
+    <!--  获取经销商数据  -->
+    <select id="getDealerData" resultType="com.highcar.demo.pojo.Dealers">
+        SELECT
+            address,
+            telephone,
+            symbol_size
+        FROM
+            dealers
+        WHERE type = 1
+    </select>
+
+    <!--  获取售后数据  -->
+    <select id="getAfterData" resultType="com.highcar.demo.pojo.Dealers">
+        SELECT
+            address,
+            telephone,
+            symbol_size
+        FROM
+            dealers
+        WHERE type = 2
+    </select>
+
+</mapper>
