@@ -1,7 +1,7 @@
 package com.highcar.demo.controller;
 
 import com.highcar.demo.pojo.News;
-import com.highcar.demo.serivce.impl.newsServiceImpl;
+import com.highcar.demo.serivce.impl.NewsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ import java.util.List;
 public class newsController {
 
     @Autowired
-    private newsServiceImpl nsi;
+    private NewsServiceImpl nsi;
 
     @RequestMapping("/title")
     public List<News> selectTitleFromType(Integer type){

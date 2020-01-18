@@ -1,9 +1,7 @@
 package com.highcar.demo.controller;
 
-import com.highcar.demo.serivce.impl.favoriteServiceImpl;
+import com.highcar.demo.serivce.impl.FavoriteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,9 +9,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/favorite")
-public class favoriteController {
+public class FavoriteController {
     @Autowired
-    private favoriteServiceImpl favoriteService;
+    private FavoriteServiceImpl favoriteService;
 
     @RequestMapping("/favoriteUid")
     public List<Integer> getFavoriteByUserId(String Uid){

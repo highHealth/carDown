@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface favoriteMapper {
+public interface FavoriteMapper {
     @Select("SELECT f.car_id FROM favorite f WHERE f.user_id= #{Uid}")
     List<Integer> getFavoriteByUserId(String Uid);
     @Insert("INSERT INTO favorite (user_id,car_id) VALUES(#{Uid},#{Cid})")

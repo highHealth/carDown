@@ -1,17 +1,16 @@
 package com.highcar.demo.serivce.impl;
 
-import com.highcar.demo.mapper.favoriteMapper;
-import com.highcar.demo.pojo.Favorite;
-import com.highcar.demo.serivce.favoriteService;
+import com.highcar.demo.mapper.FavoriteMapper;
+import com.highcar.demo.serivce.FavoriteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class favoriteServiceImpl implements favoriteService {
+public class FavoriteServiceImpl implements FavoriteService {
     @Autowired
-    private favoriteMapper favoriteMapper;
+    private FavoriteMapper favoriteMapper;
     @Override
     public List<Integer> getFavoriteByUserId(String Uid) {
 

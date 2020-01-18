@@ -5,7 +5,7 @@ import com.highcar.demo.pojo.pojotool.CarPojo;
 
 import java.util.List;
 
-public interface carService {
+public interface CarService {
     List<Car> selectJieshaoCarByType(String mark);
     CarPojo selectCarById(Integer id);
 }

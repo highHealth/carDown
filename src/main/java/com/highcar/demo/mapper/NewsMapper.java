@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface newsMapper {
+public interface NewsMapper {
     @Select("select id,title,writer,time from News where type = #{type} ORDER BY time LIMIT 5")
     List<News> selectNewsByTyte(Integer type);
     @Select("SELECT id,title,writer,time,img,location FROM News WHERE id = #{id}")

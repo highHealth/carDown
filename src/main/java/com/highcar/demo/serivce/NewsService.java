@@ -4,7 +4,7 @@ import com.highcar.demo.pojo.News;
 
 import java.util.List;
 
-public interface newsService {
+public interface NewsService {
     List<News> selectNewsByTyte(Integer type);
     News selectNewsById(Integer id);
 }

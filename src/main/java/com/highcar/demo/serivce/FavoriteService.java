@@ -4,7 +4,7 @@ import com.highcar.demo.pojo.Favorite;
 
 import java.util.List;
 
-public interface favoriteService {
+public interface FavoriteService {
     List<Integer> getFavoriteByUserId(String Uid);
     Integer AddFavorite(String Uid,Integer Cid);
     Integer delefalvorite(String Uid,Integer Cid);
