@@ -9,7 +9,7 @@ public class News {
     private String writer;
     private String time;
     private String img;
-    private String vido;
+    private String video;
     private String location;
     private String type;
 }

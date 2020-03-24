@@ -6,7 +6,7 @@ import lombok.Data;
 public class Car {
     private Integer id;
     private String name;
-    private Integer type_Id;
+    private Integer typeId;
     private String money;
     private String location;
     private String img;
